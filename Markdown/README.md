@@ -86,4 +86,4 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 
 
 ### Link to Canva File (Website Outline):
-[linktocanva](https://www.canva.com/design/DAG3DfH2QxU/xfm7vYf55lnqjK7FBn3l4g/edit?utm_content=DAG3DfH2QxU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[Mg Dela Rosa - Sy](https://www.canva.com/design/DAG3DfH2QxU/xfm7vYf55lnqjK7FBn3l4g/edit?utm_content=DAG3DfH2QxU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
