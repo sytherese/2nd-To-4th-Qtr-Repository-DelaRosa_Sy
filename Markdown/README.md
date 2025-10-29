@@ -22,7 +22,7 @@ This webpage aims to inform and introduce users to the TV show, Brooklyn 99. Div
 
 #### Other Notes:
 - All webpages have the Brooklyn 99 logo that can be found at the top left of the screen, and clicking this will show a side bar of the other subpages.
-- ALmost everything is a button that the user can press wherein they'll get directed to another webpage.
+- Almost everything is a button that the user can press wherein they'll get directed to another webpage.
 
 
 
