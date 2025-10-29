@@ -22,6 +22,7 @@ This webpage aims to hefrgvbfijuhgvdijhbjwdjfhbdhjfbhjikdejfvhbhjikedjhbilovejun
 All webpages have the Brooklyn 99 logo that can be found at the top left of the screen, and clicking this will show a side bar of the other subpages.
 
 
+
 ### Use of JavaScript:
 JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is clicked. This improves user experience by making navigation smoother and more interactive.
 
@@ -48,5 +49,5 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 #### Behind the Scenes:
 ![behindthescenes](bts.png)
 
-## Link to Canva File (Website Outline):
+### Link to Canva File (Website Outline):
 [linktocanva](https://idk)
