@@ -18,8 +18,8 @@ This webpage aims to hefrgvbfijuhgvdijhbjwdjfhbdhjfbhjikdejfvhbhjikedjhbilovejun
 
 4. Episodes Page: This page--which can also be found as an option in the side bar--will include the information and pictures of some of the scenes of all episodes from all eight seasons.
 
-Other Notes:
-- All webpages have the Brooklyn 99 logo that can be found at the top left of the screen, and clicking this will show a side bar of the other subpages.
+#### Other Notes:
+All webpages have the Brooklyn 99 logo that can be found at the top left of the screen, and clicking this will show a side bar of the other subpages.
 
 
 ### Use of JavaScript:
