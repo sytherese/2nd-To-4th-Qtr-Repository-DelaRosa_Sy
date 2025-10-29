@@ -31,8 +31,7 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 ## Wireframes
 
 ### Main Page:
-![mainpage](<img width="1786" height="1008" alt="image" src="https://github.com/user-attachments/assets/21038f58-c919-4b87-9e31-31fd50e22bec" />
-)
+![mainpage](https://cdn.discordapp.com/attachments/1163446318388228167/1433106307363377193/image.png?ex=69037bc1&is=69022a41&hm=093b80b3a8aebec5451021c84c7016fdd9d10559bbc20e7f97304547a4f25aa2)
 
 ### Side Bar:
 ![sidebar](sidebar.png)
