@@ -1,6 +1,6 @@
 # WDProjMgDelaRosa-Sy
 
-## Title
+## Inside The 99
 
 ### Logo:
 ![Logo](b99logo.png)
@@ -31,7 +31,8 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 ## Wireframes
 
 ### Main Page:
-![mainpage](mainpage.png)
+![mainpage](<img width="1786" height="1008" alt="image" src="https://github.com/user-attachments/assets/21038f58-c919-4b87-9e31-31fd50e22bec" />
+)
 
 ### Side Bar:
 ![sidebar](sidebar.png)
@@ -50,4 +51,4 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 ![behindthescenes](bts.png)
 
 ### Link to Canva File (Website Outline):
-[linktocanva](https://idk)
+[linktocanva](https://www.canva.com/design/DAG3DfH2QxU/xfm7vYf55lnqjK7FBn3l4g/edit?utm_content=DAG3DfH2QxU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
