@@ -1,4 +1,4 @@
-# WDProjMgDelaRosa-Sy hi
+# WDProjMgDelaRosa-Sy
 
 
 ## Inside The 99
