@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Brooklyn Nine-Nine Episode Archive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Archive: Episodes</title>
+
+<link rel="icon" src="../assets/b99icon.png">
+
+
+<style>
+body {
+  margin: 0;
+  background: #1b1b1b;
+  font-family: "Courier New", monospace;
+}
+
+.file {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #f5f1e6;
+  padding: 30px;
+  box-shadow: 0 0 40px rgba(0,0,0,.8);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.stamp {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: 3px solid #8b0000;
+  color: #8b0000;
+  padding: 8px;
+  font-weight: bold;
+  transform: rotate(-8deg);
+}
+
+.season h2 {
+  border-bottom: 2px solid #333;
+}
+
+.episodes-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 15px 0;
+}
+
+.episode-card {
+  min-width: 220px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.episode-card:hover {
+  transform: scale(1.08);
+}
+
+.episode-card img {
+  width: 100%;
+}
+
+.episode-info {
+  padding: 10px;
+}
+
+.episode-banner {
+  width: 100%;
+  margin-top: 20px;
+  border: 4px solid #333;
+}
+
+.caption {
+  font-size: 12px;
+  font-style: italic;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 13px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="file">
+
+<div class="stamp">ARCHIVED</div>
+
+<div class="header">
+  <h1>CASE ARCHIVE: FIRST CASES</h1>
+  <div class="back" onclick="location.href='./mainpage.html'">← Back to Case Board</div>
+</div>
+
+<p>
+Each season of <i>Brooklyn Nine-Nine</i> begins with a foundational case that establishes new dynamics, conflicts, and leadership challenges within the 99th Precinct.
+</p>
+
+<p>
+This archive documents the first episode of each season, serving as a chronological record of how the squad evolves over time.
+</p>
+
+<div class="season">
+  <h2>Season 1–8: Episode 1</h2>
+
+  <div class="episodes-row">
+
+<a href="episodeS1E1.html" class="episode-card">
+  <img src="../assets/s1.jpeg" alt="Season 1 Episode 1">
+  <div class="episode-info">
+    <h3>Season 1: Pilot</h3>
+    <p>Captain Holt takes command.</p>
+  </div>
+</a>
+
+<a href="episodeS2E1.html" class="episode-card">
+  <img src="../assets/s2.webp" alt="Season 2 Episode 1">
+  <div class="episode-info">
+    <h3>Season 2: Undercover</h3>
+    <p>Jake infiltrates the Mafia.</p>
+  </div>
+</a>
+
+<a href="episodeS3E1.html" class="episode-card">
+  <img src="../assets/s3.jpg" alt="Season 3 Episode 1">
+  <div class="episode-info">
+    <h3>Season 3: New Captain</h3>
+    <p>Major changes shake the precinct</p>
+  </div>
+</a>
+
+<a href="episodeS4E1.html" class="episode-card">
+  <img src="../assets/s4.jpg" alt="Season 4 Episode 1">
+  <div class="episode-info">
+    <h3>Season 4: Coral Palms</h3>
+    <p>The squad enters witness protection.</p>
+  </div>
+</a>
+
+<a href="episodeS5E1.html" class="episode-card">
+  <img src="../assets/s5.jpeg" alt="Season 5 Episode 1">
+  <div class="episode-info">
+    <h3>Season 5: The Big House</h3>
+    <p>Jake faces prison life.</p>
+  </div>
+</a>
+
+<a href="episodeS6E1.html" class="episode-card">
+  <img src="../assets/s6.webp" alt="Season 6 Episode 1">
+  <div class="episode-info">
+    <h3>Season 6: Honeymoon</h3>
+    <p>Jake and Amy return married.</p>
+  </div>
+</a>
+
+<a href="episodeS7E1.html" class="episode-card">
+  <img src="../assets/s7.jpeg" alt="Season 7 Episode 1">
+  <div class="episode-info">
+    <h3>Season 7: Manhunter</h3>
+    <p>A fuigitive threatens the squad.</p>
+  </div>
+</a>
+
+<a href="episodeS8E1.html" class="episode-card">
+  <img src="../assets/s8.jpeg" alt="Season 8 Episode 1">
+  <div class="episode-info">
+    <h3>Season 8: The Good Ones</h3>
+    <p>The precinct faces reform.</p>
+  </div>
+</a>
+
+
+</div>
+
+<footer>
+  <p><b>Image Captions:</b> Promotional stills from Brooklyn Nine-Nine.</p>
+  <p><b>References (APA):</b><br>
+    Goor, D., & Schur, M. (Creators). (2013–2021). <i>Brooklyn Nine-Nine</i>. NBC.
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
