@@ -5,27 +5,32 @@
 <title>Case File: Rosa Diaz</title>
 <link rel="icon" src="../assets/b99icon.png">
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
 body {
   margin: 0;
-  background: #1b1b1b;
+  background: #f5f1e6;
   font-family: "Courier New", monospace;
 }
 
 
 .file {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #f5f1e6;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   padding: 30px;
-  box-shadow: 0 0 40px rgba(0,0,0,.8);
   position: relative;
 }
-.back { 
-  cursor: pointer; 
-  font-size: 14px; 
-  text-decoration: underline; 
-}
-
 
 .header {
   display: flex;
@@ -33,10 +38,11 @@ body {
   align-items: center;
 }
 
-.header h1 {
-  margin: 0;
+.back {
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
 }
-
 
 .stamp {
   position: absolute;
@@ -49,41 +55,84 @@ body {
   transform: rotate(-8deg);
 }
 
-
-.profile {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 30px;
-  margin-top: 30px;
+.season h2 {
+  border-bottom: 2px solid #333;
 }
 
-.profile img {
+.episodes-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 15px 0;
+  max-width: 100%;
+}
+
+
+.episode-card {
+  flex: 0 0 220px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+
+.episode-card:hover {
+  transform: scale(1.08);
+}
+
+.episode-card img {
   width: 100%;
+}
+
+.episode-info {
+  padding: 10px;
+}
+
+.episode-banner {
+  width: 100%;
+  margin-top: 20px;
   border: 4px solid #333;
 }
 
-
-.section {
-  margin-top: 30px;
-}
-
-.section h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 
-.note {
-  background: #fff3a0;
-  padding: 10px;
-  transform: rotate(-2deg);
-  width: fit-content;
-  margin-top: 15px;
+.caption {
+  font-size: 12px;
+  font-style: italic;
 }
 
+.site-footer {
+  margin-top: 40px;
+  font-size: 13px;
+  text-align: center;
+}
 
-.timeline li {
-  margin-bottom: 8px;
+.site-footer hr {
+  border: none;
+  border-top: 2px solid #333;
+  margin-bottom: 15px;
+}
+
+.site-footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #8b0000;
+}
+
+.site-footer .disclaimer {
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
 }
 </style>
 </head>
@@ -152,6 +201,31 @@ body {
 </div>
 
 </div>
+
+<footer class="site-footer">
+  <hr>
+
+  <p>
+    © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
+  </p>
+
+  <p>
+    Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
+    Grade 9 – Magnesium
+  </p>
+
+  <p>
+    <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
+      View Full APA References (Google Docs)
+    </a>
+  </p>
+
+  <p class="disclaimer">
+    Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
+    for educational purposes only and does not claim ownership of any
+    characters, images, or media used.
+  </p>
+</footer>
 
 </body>
 

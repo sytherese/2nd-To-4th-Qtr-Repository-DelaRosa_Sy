@@ -9,18 +9,30 @@
 <link rel="icon" src="../assets/download.jpeg">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
 body {
   margin: 0;
-  background: #1b1b1b;
+  background: #f5f1e6;
   font-family: "Courier New", monospace;
 }
 
+
 .file {
-  max-width: 1000px;
-  margin: 40px auto;
-  background: #f5f1e6;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
   padding: 30px;
-  box-shadow: 0 0 40px rgba(0,0,0,.8);
   position: relative;
 }
 
@@ -55,16 +67,20 @@ body {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 15px 0;
+  max-width: 100%;
 }
 
+
 .episode-card {
-  min-width: 220px;
+  flex: 0 0 220px;
   background: #111;
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s;
 }
+
 
 .episode-card:hover {
   transform: scale(1.08);
@@ -84,14 +100,43 @@ body {
   border: 4px solid #333;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 .caption {
   font-size: 12px;
   font-style: italic;
 }
 
-footer {
+.site-footer {
   margin-top: 40px;
   font-size: 13px;
+  text-align: center;
+}
+
+.site-footer hr {
+  border: none;
+  border-top: 2px solid #333;
+  margin-bottom: 15px;
+}
+
+.site-footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #8b0000;
+}
+
+.site-footer .disclaimer {
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
 }
 
 </style>
@@ -121,10 +166,29 @@ This episode emphasizes urgency, teamwork, and the consequences of unfinished po
 </p>
 </div>
 
-<footer>
-<p><b>References (APA):</b><br>
-Goor, D., & Schur, M. (2020). <i>Brooklyn Nine-Nine: Manhunter</i>. NBC.
-</p>
+<footer class="site-footer">
+  <hr>
+
+  <p>
+    © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
+  </p>
+
+  <p>
+    Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
+    Grade 9 – Magnesium
+  </p>
+
+  <p>
+    <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
+      View Full APA References (Google Docs)
+    </a>
+  </p>
+
+  <p class="disclaimer">
+    Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
+    for educational purposes only and does not claim ownership of any
+    characters, images, or media used.
+  </p>
 </footer>
 
 </div>
