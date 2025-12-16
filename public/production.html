@@ -6,12 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Case Archive: Production</title>
 
-<link rel="icon" src="../assets/b99icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/b99icon.png" type="image/png">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   width: 100%;
@@ -26,7 +25,6 @@ body {
   font-family: "Courier New", monospace;
 }
 
-
 .file {
   width: 100%;
   max-width: 100%;
@@ -37,7 +35,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -79,10 +77,7 @@ body {
   margin-top: 5px;
 }
 
-ul {
-  margin-left: 20px;
-}
-
+ul { margin-left: 20px; }
 
 .bts-gallery {
   display: flex;
@@ -92,7 +87,7 @@ ul {
 }
 
 .bts-card {
-  flex: 1 1 calc(33.333% - 10px); /* 3 images per row */
+  flex: 1 1 calc(33.333% - 10px);
   background: #111;
   padding: 5px;
   border: 4px solid #333;
@@ -101,14 +96,6 @@ ul {
 .bts-card img {
   width: 100%;
   display: block;
-}
-
-.bts-card .caption {
-  font-size: 11px;
-  font-style: italic;
-  text-align: center;
-  margin-top: 5px;
-  color: #fff;
 }
 
 .site-footer {
@@ -137,21 +124,98 @@ ul {
   font-size: 11px;
   font-style: italic;
 }
+
+/* HEADER SIDEBAR ONLY */
+.header-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 4000;
+}
+
+.header-toggle img {
+  height: 85px;
+  width: auto;
+}
+
+.header-toggle img:hover {
+  transform: scale(1.05);
+}
+
+.header-sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: rgba(245,241,230,0.95);
+  padding: 90px 30px;
+  z-index: 3999;
+  transition: left 0.35s ease;
+}
+
+.header-sidebar.open { left: 0; }
+
+.header-sidebar a {
+  display: block;
+  padding: 18px 0;
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 2px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.header-sidebar a:hover {
+  color: #8b0000;
+}
+
+.header-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 3998;
+}
+
+.header-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
+<button class="header-toggle" id="sidebarToggle">
+  <img src="../assets/b99logo.png" alt="Menu">
+</button>
+
+<aside class="header-sidebar" id="sidebar">
+  <a href="../index.html">Main Page</a>
+  <a href="episodes.html">Episodes</a>
+  <a href="production.html">Production</a>
+  <a href="solvecase.html">Solve a Case</a>
+</aside>
+
+<div class="header-backdrop" id="sidebarBackdrop"></div>
+
 <div class="file">
 
 <div class="stamp">ARCHIVED</div>
 
 <div class="header">
   <h1>CASE ARCHIVE: PRODUCTIONS</h1>
-  <div class="back" onclick="location.href='./mainpage.html'">← Back to Case Board</div>
 </div>
 
 <p>
-This page compiles the production details behind <i>Brooklyn Nine-Nine</i>, including creators, showrunners, filming locations, and fun behind-the-scenes trivia. Understanding the production gives insight into the creative decisions that shaped the 99th Precinct’s stories and characters.
+This page compiles the production details behind <i>Brooklyn Nine-Nine</i>, including creators, showrunners, filming locations, and fun behind-the-scenes trivia.
 </p>
 
 <div class="section">
@@ -161,7 +225,7 @@ This page compiles the production details behind <i>Brooklyn Nine-Nine</i>, incl
   <li><b>Executive Producers:</b> Michael Schur, Dan Goor, Luke Del Tredici</li>
   <li><b>Showrunners:</b> Dan Goor (Seasons 1–7), Luke Del Tredici (Season 8)</li>
 </ul>
-<img class="prod-img" src="../assets/creators.jpg" alt="Michael Schur and Dan Goor">
+<img class="prod-img" src="../assets/creators.jpg">
 <p class="caption">Creators Michael Schur (left) and Dan Goor (right).</p>
 </div>
 
@@ -170,84 +234,78 @@ This page compiles the production details behind <i>Brooklyn Nine-Nine</i>, incl
 <ul>
   <li>Mainly filmed at CBS Studio Center, Studio City, California</li>
   <li>Exterior shots of the NYPD precinct used Brooklyn locations</li>
-  <li>Episodes occasionally shot on location in New York City for special storylines</li>
+  <li>Episodes occasionally shot on location in New York City</li>
 </ul>
-<img class="prod-img" src="../assets/filming.jpg" alt="Filming on location">
-<p class="caption">The cast filming an outdoor scene on location in Brooklyn.</p>
+<img class="prod-img" src="../assets/filming.jpg">
+<p class="caption">The cast filming an outdoor scene on location.</p>
 </div>
 
 <div class="section">
 <h2>Trivia & Fun Facts</h2>
 <ul>
   <li>The show’s theme song was composed by Dan Marocco</li>
-  <li>Brooklyn Nine-Nine was originally on Fox (2013–2018) then picked up by NBC (2019–2021)</li>
-  <li>The series won a Golden Globe for Best Television Series – Musical or Comedy in 2014</li>
-  <li>Cast chemistry was a key factor in the show’s longevity</li>
+  <li>Originally aired on Fox, later picked up by NBC</li>
+  <li>Golden Globe winner (2014)</li>
+  <li>Cast chemistry fueled its longevity</li>
 </ul>
 
 <div class="bts-gallery">
-  <div class="bts-card">
-    <img src="../assets/cast1.jpg" alt="Cast BTS 1">
-
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast2.jpg" alt="Cast BTS 2">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast3.jpg" alt="Cast BTS 3">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast4.jpg" alt="Cast BTS 4">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast5.webp" alt="Cast BTS 5">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast9.jpeg" alt="Cast BTS 9">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast10.jpg" alt="Cast BTS 10">
-    
-  </div>
-  <div class="bts-card">
-    <img src="../assets/cast8.jpg" alt="Cast BTS 8">
-    
-  
+  <div class="bts-card"><img src="../assets/cast1.jpg"></div>
+  <div class="bts-card"><img src="../assets/cast2.jpg"></div>
+  <div class="bts-card"><img src="../assets/cast3.jpg"></div>
+  <div class="bts-card"><img src="../assets/cast4.jpg"></div>
+  <div class="bts-card"><img src="../assets/cast5.webp"></div>
+  <div class="bts-card"><img src="../assets/cast9.jpeg"></div>
+  <div class="bts-card"><img src="../assets/cast10.jpg"></div>
+  <div class="bts-card"><img src="../assets/cast8.jpg"></div>
 </div>
 
 <p class="caption">Cast members sharing a laugh on set.</p>
 </div>
 
-<footer class="site-footer">
-  <hr>
+  <footer class="site-footer">
+    <hr>
 
-  <p>
-    © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
-  </p>
+    <p>
+      © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
+    </p>
 
-  <p>
-    Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
-    Grade 9 – Magnesium
-  </p>
+    <p>
+      Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
+      Grade 9 – Magnesium
+    </p>
 
-  <p>
-    <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
-      View Full APA References (Google Docs)
-    </a>
-  </p>
+    <p>
+      <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
+        View Full APA References (Google Docs)
+      </a>
+    </p>
 
-  <p class="disclaimer">
-    Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
-    for educational purposes only and does not claim ownership of any
-    characters, images, or media used.
-  </p>
-</footer>
+    <p class="disclaimer">
+      Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
+      for educational purposes only and does not claim ownership of any
+      characters, images, or media used.
+    </p>
+  </footer>
 
 </div>
+
+<script>
+/* sidebar toggle */
+const toggle = document.getElementById("sidebarToggle");
+const sidebar = document.getElementById("sidebar");
+const backdrop = document.getElementById("sidebarBackdrop");
+
+toggle.onclick = () => {
+  sidebar.classList.add("open");
+  backdrop.classList.add("show");
+};
+
+backdrop.onclick = () => {
+  sidebar.classList.remove("open");
+  backdrop.classList.remove("show");
+};
+</script>
+
 </body>
 </html>

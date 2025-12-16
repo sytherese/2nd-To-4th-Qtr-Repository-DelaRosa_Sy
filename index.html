@@ -5,6 +5,7 @@
 <title>B99 Case Board</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/b99icon.png" type="image/png">
 
 <style>
 * { box-sizing: border-box; }
@@ -17,7 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 55vh;
@@ -45,7 +45,6 @@ body {
   font-size: 3rem;
 }
 
-/* ================= BOARD SECTION ================= */
 .board-section {
   min-height: 150vh;
   padding: 40px 0 80px;
@@ -59,10 +58,8 @@ body {
   width: 98vw;
   height: 100vh;
   margin: auto;
-  background: transparent;
 }
 
-/* ================= STRINGS ================= */
 .strings {
   position: absolute;
   inset: 0;
@@ -89,7 +86,6 @@ body {
   filter: drop-shadow(0 0 10px rgba(255,80,80,0.9));
 }
 
-/* ================= TOOLTIP ================= */
 #tooltip {
   position: fixed;
   background: rgba(20,10,10,0.95);
@@ -102,7 +98,6 @@ body {
   z-index: 999;
 }
 
-/* ================= PINS ================= */
 .pin {
   position: absolute;
   width: 140px;
@@ -125,21 +120,16 @@ body {
   border-radius: 3px;
 }
 
-/* ================= PIN POSITIONS ================= */
 .jake { top: 6%; left: 4%; }
 .amy { top: 1%; right: 4%; }
 .holt { top: -6%; left: 50%; transform: translateX(-50%); }
-
 .rosa { top: 42%; left: 1%; }
 .terry { top: 45%; right: 1%; }
-
-.charles { bottom: -30%; left: 4%; }
-.gina { bottom: -28%; right: 4%; }
-
+.charles { bottom: -26%; left: 4%; }
+.gina { bottom: -24%; right: 4%; }
 .hitchcock { bottom: -22%; left: 37%; }
 .scully { bottom: -22%; left: 55%; }
 
-/* ================= CENTER LOGO ================= */
 .center-logo {
   position: absolute;
   top: 50%;
@@ -154,18 +144,18 @@ body {
   filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
 }
 
-/* ================= DECOR ================= */
 .sticky {
   position: absolute;
-  background: #f3e6a1;
+  background: #f5f900;
   padding: 10px;
   font-family: 'Special Elite', cursive;
   font-size: 0.8rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-.note1 { top: 18%; left: 35%; transform: rotate(-3deg); }
-.note2 { bottom: 28%; right: 30%; transform: rotate(4deg); }
+.note1 { color:black; top: 18%; left: 31%; transform: rotate(-3deg); }
+.note2 { color:black; bottom: 30%; right: 24%; transform: rotate(7deg); }
+.note3 { color:black; bottom: 26%; left: 28%; transform: rotate(5deg); }
 
 .stamp {
   position: absolute;
@@ -175,10 +165,12 @@ body {
   color: rgba(150,0,0,0.4);
   transform: rotate(-15deg);
 }
+
 .site-footer {
   margin-top: 40px;
   font-size: 13px;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .site-footer hr {
@@ -201,13 +193,86 @@ body {
   font-size: 11px;
   font-style: italic;
 }
-.site-footer {
-  padding-bottom: 40px;
+
+.header-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 4000;
+}
+
+.header-toggle img {
+  height: 85px;
+  width: auto;
+}
+
+.header-toggle img:hover {
+  transform: scale(1.05);
+}
+
+.header-sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background: rgba(245,241,230,0.95);
+  padding: 90px 30px;
+  z-index: 3999;
+  transition: left 0.35s ease;
+}
+
+.header-sidebar.open { left: 0; }
+
+.header-sidebar a {
+  display: block;
+  padding: 18px 0;
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 2px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.header-sidebar a:hover {
+  color: #8b0000;
+}
+
+.header-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 3998;
+}
+
+.header-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
+<button class="header-toggle" id="sidebarToggle">
+  <img src="assets/b99logo.png" alt="Menu">
+</button>
+
+<aside class="header-sidebar" id="sidebar">
+  <a href="index.html">Main Page</a>
+  <a href="./public/episodes.html">Episodes</a>
+  <a href="./public/production.html">Production</a>
+  <a href="./public/solvecase.html">Solve A Case</a>
+</aside>
+
+<div class="header-backdrop" id="sidebarBackdrop"></div>
 
 <div id="tooltip"></div>
 
@@ -221,20 +286,17 @@ body {
 <section class="board-section">
 <div class="board">
 
-<!-- STRINGS -->
 <svg class="strings">
-  <!-- Center connections -->
   <g class="connection" data-text="Detective / Central Figure"><line x1="50%" y1="50%" x2="8%" y2="12%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="92%" y2="12%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="50%" y2="5%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="6%" y2="48%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="94%" y2="48%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="8%" y2="92%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="92%" y2="92%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="45%" y2="96%" /></g>
-  <g class="connection"><line x1="50%" y1="50%" x2="59%" y2="96%" /></g>
+  <g class="connection" data-text="Detective to Sergeant"><line x1="50%" y1="50%" x2="92%" y2="12%" /></g>
+  <g class="connection" data-text="Commanding Officer (CO)"><line x1="50%" y1="50%" x2="50%" y2="5%" /></g>
+  <g class="connection" data-text="Detective"><line x1="50%" y1="50%" x2="6%" y2="48%" /></g>
+  <g class="connection" data-text="Supervising Officer / Sergeant"><line x1="50%" y1="50%" x2="94%" y2="48%" /></g>
+  <g class="connection" data-text="Detective"><line x1="50%" y1="50%" x2="8%" y2="92%" /></g>
+  <g class="connection" data-text="Civilian Administrator"><line x1="50%" y1="50%" x2="92%" y2="92%" /></g>
+  <g class="connection" data-text="Detective"><line x1="50%" y1="50%" x2="45%" y2="96%" /></g>
+  <g class="connection" data-text="Detective"><line x1="50%" y1="50%" x2="59%" y2="96%" /></g>
 
-  <!-- Special relationships -->
   <g class="connection special" data-text="Romantic Partners">
     <line x1="8%" y1="12%" x2="92%" y2="12%" />
   </g>
@@ -244,12 +306,10 @@ body {
   </g>
 </svg>
 
-<!-- CENTER LOGO -->
 <div class="center-logo">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Brooklyn_Nine-Nine_Logo.png">
 </div>
 
-<!-- PINS (linked to your existing files) -->
 <a href="./public/jake.html" class="pin jake"><img src="https://static.wixstatic.com/media/b88cd2_5e6570cf9ddd4bed8abb88a35581e70c~mv2.jpg">Jake</a>
 <a href="./public/amy.html" class="pin amy"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/7/78/S7_Melissa_Fumero_-_Amy_Santiago.png">Amy</a>
 <a href="./public/holt.html" class="pin holt"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/8/86/S7_Andre_Braugher_-_Raymond_Holt.png">Holt</a>
@@ -260,17 +320,16 @@ body {
 <a href="./public/hitchcock.html" class="pin hitchcock"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/a/a5/S7_Dirk_Blocker_-_Michael_Hitchcock.png">Hitchcock</a>
 <a href="./public/scully.html" class="pin scully"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/c/c4/S7_Joel_McKinnon_Miller_-_Norm_Scully.png">Scully</a>
 
-<!-- DECOR -->
 <div class="sticky note1">“Peralta never follows protocol.”</div>
 <div class="sticky note2">“Food theft incidents ↑”</div>
+<div class="sticky note3">"let's go nine-nine!"</div>
 <div class="stamp">CASE ACTIVE</div>
 
 </div>
 </section>
 
-<!-- JS (tooltip logic) -->
-<!-- JS (tooltip logic) -->
 <script>
+/* tooltip interaction */
 const tooltip = document.getElementById("tooltip");
 
 document.querySelectorAll(".connection").forEach(conn => {
@@ -285,9 +344,23 @@ document.querySelectorAll(".connection").forEach(conn => {
     tooltip.style.opacity = 0;
   });
 });
+
+/* sidebar toggle */
+const toggle = document.getElementById("sidebarToggle");
+const sidebar = document.getElementById("sidebar");
+const backdrop = document.getElementById("sidebarBackdrop");
+
+toggle.onclick = () => {
+  sidebar.classList.add("open");
+  backdrop.classList.add("show");
+};
+
+backdrop.onclick = () => {
+  sidebar.classList.remove("open");
+  backdrop.classList.remove("show");
+};
 </script>
 
-<!-- FOOTER (NOW CORRECTLY PLACED) -->
 <footer class="site-footer">
   <hr>
 
@@ -312,6 +385,6 @@ document.querySelectorAll(".connection").forEach(conn => {
     characters, images, or media used.
   </p>
 </footer>
-
 </body>
 </html>
+
