@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Case File: Charles Boyle</title>
-<link rel="icon" src="../assets/b99icon.png">
+<title>Case File: Jake Peralta</title>
+<link rel="icon" href="../assets/b99icon.png">
 
 <style>
 * {
@@ -14,105 +14,122 @@ html, body {
   width: 100%;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: auto;
 }
-
 
 body {
-  margin: 0;
   background: #f5f1e6;
   font-family: "Courier New", monospace;
+  color: #111;
 }
 
-
+/* ================= FILE CONTAINER ================= */
 .file {
   width: 100%;
-  max-width: 100%;
   min-height: 100vh;
-  padding: 30px;
+  padding: 40px 60px;
   position: relative;
 }
 
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 3px solid #333;
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  letter-spacing: 2px;
 }
 
 .back {
   cursor: pointer;
   font-size: 14px;
   text-decoration: underline;
+  opacity: 0.7;
 }
 
+.back:hover {
+  opacity: 1;
+}
+
+/* ================= STAMP ================= */
 .stamp {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 25px;
+  right: 40px;
   border: 3px solid #8b0000;
   color: #8b0000;
-  padding: 8px;
+  padding: 8px 12px;
   font-weight: bold;
   transform: rotate(-8deg);
+  letter-spacing: 1px;
 }
 
-.season h2 {
-  border-bottom: 2px solid #333;
-}
-
-.episodes-row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 15px 0;
-  max-width: 100%;
-}
-
-
-.episode-card {
-  flex: 0 0 220px;
-  background: #111;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-
-.episode-card:hover {
-  transform: scale(1.08);
-}
-
-.episode-card img {
-  width: 100%;
-}
-
-.episode-info {
-  padding: 10px;
-}
-
-.episode-banner {
-  width: 100%;
-  margin-top: 20px;
-  border: 4px solid #333;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-.caption {
-  font-size: 12px;
-  font-style: italic;
-}
-
-.site-footer {
+/* ================= PROFILE ================= */
+.profile {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
   margin-top: 40px;
+  align-items: start;
+}
+
+.profile img {
+  width: 100%;
+  border: 4px solid #333;
+  background: #fff;
+}
+
+/* ================= TEXT BLOCK ================= */
+.profile p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* ================= NOTE ================= */
+.note {
+  background: #fff3a0;
+  padding: 12px;
+  margin-top: 15px;
+  display: inline-block;
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  margin-top: 45px;
+}
+
+.section h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.section ul {
+  margin-top: 10px;
+}
+
+.section li {
+  margin-bottom: 8px;
+}
+
+/* ================= TIMELINE ================= */
+.timeline li {
+  margin-bottom: 6px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  margin-top: 60px;
   font-size: 13px;
   text-align: center;
+  opacity: 0.9;
 }
 
 .site-footer hr {
@@ -142,92 +159,96 @@ img {
 
 <div class="file">
 
-<div class="stamp">CLASSIFIED</div>
+  <div class="stamp">CLASSIFIED</div>
 
-<div class="header"> <h1>CASE FILE: CHARLES BOYLE</h1> <div class="back" onclick="location.href='./mainpage.html'"> ← Back to Case Board </div> </div>
-
-<div class="profile">
-  <img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/f/f3/S7_Joe_Lo_Truglio_-_Charles_Boyle.png" alt="Charles Boyle">
-
-  <div>
-    <p><b>Rank:</b> Detective</p>
-    <p><b>Badge Number:</b> 1981</p>
-    <p><b>Status:</b> Active Duty</p>
-    <p><b>Personality Notes:</b><br>
-      Immature but highly intelligent. Shows strong emotional loyalty.
-      Exceptional instincts despite lack of discipline.
-    </p>
-
-    <div class="note">
-      “Solves cases like a genius, behaves like a child.”
+  <div class="header">
+    <h1>CASE FILE: JAKE PERALTA</h1>
+    <div class="back" onclick="location.href='./index.html'">
+      ← Back to Case Board
     </div>
   </div>
+
+  <div class="profile">
+    <img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/8/88/S7_Andy_Samberg_-_Jake_Peralta.png" alt="Jake Peralta">
+
+    <div>
+      <p><b>Rank:</b> Detective</p>
+      <p><b>Badge Number:</b> 1981</p>
+      <p><b>Status:</b> Active Duty</p>
+      <p><b>Personality Notes:</b><br>
+        Immature but highly intelligent. Shows strong emotional loyalty.
+        Exceptional instincts despite lack of discipline.
+      </p>
+
+      <div class="note">
+        “Solves cases like a genius, behaves like a child.”
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Key Relationships</h2>
+    <ul>
+      <li><b>Amy Santiago:</b> Wife, investigative equal</li>
+      <li><b>Charles Boyle:</b> Best friend, emotional support</li>
+      <li><b>Captain Holt:</b> Mentor and father figure</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Important Cases & Events</h2>
+    <ul>
+      <li>The Halloween Heists (multiple wins)</li>
+      <li>Jimmy Figgis Manhunt</li>
+      <li>Undercover with the Mafia</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Timeline</h2>
+    <ul class="timeline">
+      <li>Season 1: Reckless but talented detective</li>
+      <li>Season 3: Emotional growth begins</li>
+      <li>Season 6: Marriage to Amy Santiago</li>
+      <li>Season 8: Leaves NYPD</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Trivia & Notes</h2>
+    <ul>
+      <li>Obsessed with Die Hard</li>
+      <li>Won multiple Halloween Heists</li>
+      <li>Extremely competitive</li>
+    </ul>
+  </div>
+
+  <footer class="site-footer">
+    <hr>
+
+    <p>
+      © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
+    </p>
+
+    <p>
+      Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
+      Grade 9 – Magnesium
+    </p>
+
+    <p>
+      <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
+        View Full APA References (Google Docs)
+      </a>
+    </p>
+
+    <p class="disclaimer">
+      Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
+      for educational purposes only and does not claim ownership of any
+      characters, images, or media used.
+    </p>
+  </footer>
+
 </div>
-
-<div class="section">
-  <h2>Key Relationships</h2>
-  <ul>
-    <li><b>Amy Santiago:</b> Wife, investigative equal</li>
-    <li><b>Charles Boyle:</b> Best friend, emotional support</li>
-    <li><b>Captain Holt:</b> Mentor and father figure</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Important Cases & Events</h2>
-  <ul>
-    <li>The Halloween Heists (multiple wins)</li>
-    <li>Jimmy Figgis Manhunt</li>
-    <li>Undercover with the Mafia</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Timeline</h2>
-  <ul class="timeline">
-    <li>Season 1: Reckless but talented detective</li>
-    <li>Season 3: Emotional growth begins</li>
-    <li>Season 6: Marriage to Amy Santiago</li>
-    <li>Season 8: Leaves NYPD</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Trivia & Notes</h2>
-  <ul>
-    <li>Obsessed with Die Hard</li>
-    <li>Won multiple Halloween Heists</li>
-    <li>Extremely competitive</li>
-  </ul>
-</div>
-
-</div>
-
-<footer class="site-footer">
-  <hr>
-
-  <p>
-    © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
-  </p>
-
-  <p>
-    Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
-    Grade 9 – Magnesium
-  </p>
-
-  <p>
-    <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
-      View Full APA References (Google Docs)
-    </a>
-  </p>
-
-  <p class="disclaimer">
-    Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
-    for educational purposes only and does not claim ownership of any
-    characters, images, or media used.
-  </p>
-</footer>
 
 </body>
-
 </html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>B99 Case Board</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #1a1412;
+  font-family: 'Inter', sans-serif;
+  color: #f5f0eb;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 55vh;
+  background: url("https://www.filmindependent.org/wp-content/uploads/2015/05/The-cast-of-Brooklyn-Nine-Nine.jpg")
+    center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.75),
+    #1a1412
+  );
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 5px;
+  font-size: 3rem;
+}
+
+/* ================= BOARD SECTION ================= */
+.board-section {
+  min-height: 100vh;
+  padding: 40px 0 80px;
+  background:
+    radial-gradient(circle at top, rgba(120,0,0,0.15), transparent 60%),
+    linear-gradient(#1a1412, #0e0a08);
+}
+
+.board {
+  position: relative;
+  width: 98vw;
+  height: 88vh;
+  margin: auto;
+  background: transparent;
+}
+
+/* ================= STRINGS ================= */
+.strings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.connection line {
+  stroke: #8b1d1d;
+  stroke-width: 3;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connection:hover line {
+  stroke: #ff4d4d;
+  filter: drop-shadow(0 0 6px rgba(255,80,80,0.9));
+}
+
+.connection.special line {
+  stroke-dasharray: 6 4;
+  filter: drop-shadow(0 0 10px rgba(255,80,80,0.9));
+}
+
+/* ================= TOOLTIP ================= */
+#tooltip {
+  position: fixed;
+  background: rgba(20,10,10,0.95);
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-family: 'Special Elite', cursive;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ================= PINS ================= */
+.pin {
+  position: absolute;
+  width: 140px;
+  background: #f6f1eb;
+  color: #111;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Special Elite', cursive;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+  z-index: 3;
+}
+
+.pin:hover { transform: scale(1.05); }
+
+.pin img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+/* ================= PIN POSITIONS ================= */
+.jake { top: 6%; left: 4%; }
+.amy { top: 1%; right: 4%; }
+.holt { top: -6%; left: 50%; transform: translateX(-50%); }
+
+.rosa { top: 42%; left: 1%; }
+.terry { top: 45%; right: 1%; }
+
+.charles { bottom: -30%; left: 4%; }
+.gina { bottom: -28%; right: 4%; }
+
+.hitchcock { bottom: -22%; left: 37%; }
+.scully { bottom: -22%; left: 55%; }
+
+/* ================= CENTER LOGO ================= */
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0.85;
+}
+
+.center-logo img {
+  width: 260px;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
+}
+
+/* ================= DECOR ================= */
+.sticky {
+  position: absolute;
+  background: #f3e6a1;
+  padding: 10px;
+  font-family: 'Special Elite', cursive;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.note1 { top: 18%; left: 35%; transform: rotate(-3deg); }
+.note2 { bottom: 28%; right: 30%; transform: rotate(4deg); }
+
+.stamp {
+  position: absolute;
+  bottom: 18%;
+  left: 14%;
+  font-size: 1.2rem;
+  color: rgba(150,0,0,0.4);
+  transform: rotate(-15deg);
+}
+</style>
+</head>
+
+<body>
+
+<div id="tooltip"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-title">BROOKLYN NINE-NINE</div>
+</section>
+
+<!-- CASE BOARD -->
+<section class="board-section">
+<div class="board">
+
+<!-- STRINGS -->
+<svg class="strings">
+  <!-- Center connections -->
+  <g class="connection" data-text="Detective / Central Figure"><line x1="50%" y1="50%" x2="8%" y2="12%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="92%" y2="12%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="50%" y2="5%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="6%" y2="48%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="94%" y2="48%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="8%" y2="92%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="92%" y2="92%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="45%" y2="96%" /></g>
+  <g class="connection"><line x1="50%" y1="50%" x2="59%" y2="96%" /></g>
+
+  <!-- Special relationships -->
+  <g class="connection special" data-text="Romantic Partners">
+    <line x1="8%" y1="12%" x2="92%" y2="12%" />
+  </g>
+
+  <g class="connection special" data-text="Partners in Chaos">
+    <line x1="45%" y1="96%" x2="59%" y2="96%" />
+  </g>
+</svg>
+
+<!-- CENTER LOGO -->
+<div class="center-logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Brooklyn_Nine-Nine_Logo.png">
+</div>
+
+<!-- PINS (linked to your existing files) -->
+<a href="jake.html" class="pin jake"><img src="https://static.wixstatic.com/media/b88cd2_5e6570cf9ddd4bed8abb88a35581e70c~mv2.jpg">Jake</a>
+<a href="amy.html" class="pin amy"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/7/78/S7_Melissa_Fumero_-_Amy_Santiago.png">Amy</a>
+<a href="holt.html" class="pin holt"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/8/86/S7_Andre_Braugher_-_Raymond_Holt.png">Holt</a>
+<a href="rosa.html" class="pin rosa"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/d/db/S7_Stephanie_Beatriz_-_Rosa_Diaz.png">Rosa</a>
+<a href="terry.html" class="pin terry"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/e/ed/Terry-509.jpg">Terry</a>
+<a href="charles.html" class="pin charles"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/f/f3/S7_Joe_Lo_Truglio_-_Charles_Boyle.png">Charles</a>
+<a href="gina.html" class="pin gina"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/b/bb/S1_Gina_Portrait.jpg">Gina</a>
+<a href="hitchcock.html" class="pin hitchcock"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/a/a5/S7_Dirk_Blocker_-_Michael_Hitchcock.png">Hitchcock</a>
+<a href="scully.html" class="pin scully"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/c/c4/S7_Joel_McKinnon_Miller_-_Norm_Scully.png">Scully</a>
+
+<!-- DECOR -->
+<div class="sticky note1">“Peralta never follows protocol.”</div>
+<div class="sticky note2">“Food theft incidents ↑”</div>
+<div class="stamp">CASE ACTIVE</div>
+
+</div>
+</section>
+
+<!-- JS (tooltip logic) -->
+<script>
+const tooltip = document.getElementById("tooltip");
+
+document.querySelectorAll(".connection").forEach(conn => {
+  conn.addEventListener("mousemove", e => {
+    tooltip.textContent = conn.dataset.text || "Connected";
+    tooltip.style.left = e.clientX + 10 + "px";
+    tooltip.style.top = e.clientY + 10 + "px";
+    tooltip.style.opacity = 1;
+  });
+
+  conn.addEventListener("mouseleave", () => {
+    tooltip.style.opacity = 0;
+  });
+});
+</script>
+
+</body>
+</html>
