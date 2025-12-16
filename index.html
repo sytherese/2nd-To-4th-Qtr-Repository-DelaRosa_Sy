@@ -47,7 +47,7 @@ body {
 
 /* ================= BOARD SECTION ================= */
 .board-section {
-  min-height: 100vh;
+  min-height: 150vh;
   padding: 40px 0 80px;
   background:
     radial-gradient(circle at top, rgba(120,0,0,0.15), transparent 60%),
@@ -57,7 +57,7 @@ body {
 .board {
   position: relative;
   width: 98vw;
-  height: 88vh;
+  height: 100vh;
   margin: auto;
   background: transparent;
 }
@@ -175,6 +175,35 @@ body {
   color: rgba(150,0,0,0.4);
   transform: rotate(-15deg);
 }
+.site-footer {
+  margin-top: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.site-footer hr {
+  border: none;
+  border-top: 2px solid #333;
+  margin-bottom: 15px;
+}
+
+.site-footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #8b0000;
+}
+
+.site-footer .disclaimer {
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
+}
+.site-footer {
+  padding-bottom: 40px;
+}
 </style>
 </head>
 
@@ -221,15 +250,15 @@ body {
 </div>
 
 <!-- PINS (linked to your existing files) -->
-<a href="jake.html" class="pin jake"><img src="https://static.wixstatic.com/media/b88cd2_5e6570cf9ddd4bed8abb88a35581e70c~mv2.jpg">Jake</a>
-<a href="amy.html" class="pin amy"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/7/78/S7_Melissa_Fumero_-_Amy_Santiago.png">Amy</a>
-<a href="holt.html" class="pin holt"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/8/86/S7_Andre_Braugher_-_Raymond_Holt.png">Holt</a>
-<a href="rosa.html" class="pin rosa"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/d/db/S7_Stephanie_Beatriz_-_Rosa_Diaz.png">Rosa</a>
-<a href="terry.html" class="pin terry"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/e/ed/Terry-509.jpg">Terry</a>
-<a href="charles.html" class="pin charles"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/f/f3/S7_Joe_Lo_Truglio_-_Charles_Boyle.png">Charles</a>
-<a href="gina.html" class="pin gina"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/b/bb/S1_Gina_Portrait.jpg">Gina</a>
-<a href="hitchcock.html" class="pin hitchcock"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/a/a5/S7_Dirk_Blocker_-_Michael_Hitchcock.png">Hitchcock</a>
-<a href="scully.html" class="pin scully"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/c/c4/S7_Joel_McKinnon_Miller_-_Norm_Scully.png">Scully</a>
+<a href="./public/jake.html" class="pin jake"><img src="https://static.wixstatic.com/media/b88cd2_5e6570cf9ddd4bed8abb88a35581e70c~mv2.jpg">Jake</a>
+<a href="./public/amy.html" class="pin amy"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/7/78/S7_Melissa_Fumero_-_Amy_Santiago.png">Amy</a>
+<a href="./public/holt.html" class="pin holt"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/8/86/S7_Andre_Braugher_-_Raymond_Holt.png">Holt</a>
+<a href="./public/rosa.html" class="pin rosa"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/d/db/S7_Stephanie_Beatriz_-_Rosa_Diaz.png">Rosa</a>
+<a href="./public/terry.html" class="pin terry"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/e/ed/Terry-509.jpg">Terry</a>
+<a href="./public/charles.html" class="pin charles"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/f/f3/S7_Joe_Lo_Truglio_-_Charles_Boyle.png">Charles</a>
+<a href="./public/gina.html" class="pin gina"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/b/bb/S1_Gina_Portrait.jpg">Gina</a>
+<a href="./public/hitchcock.html" class="pin hitchcock"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/a/a5/S7_Dirk_Blocker_-_Michael_Hitchcock.png">Hitchcock</a>
+<a href="./public/scully.html" class="pin scully"><img src="https://static.wikia.nocookie.net/brooklynnine-nine/images/c/c4/S7_Joel_McKinnon_Miller_-_Norm_Scully.png">Scully</a>
 
 <!-- DECOR -->
 <div class="sticky note1">“Peralta never follows protocol.”</div>
@@ -239,6 +268,7 @@ body {
 </div>
 </section>
 
+<!-- JS (tooltip logic) -->
 <!-- JS (tooltip logic) -->
 <script>
 const tooltip = document.getElementById("tooltip");
@@ -256,6 +286,32 @@ document.querySelectorAll(".connection").forEach(conn => {
   });
 });
 </script>
+
+<!-- FOOTER (NOW CORRECTLY PLACED) -->
+<footer class="site-footer">
+  <hr>
+
+  <p>
+    © 2025 <i>Brooklyn Nine-Nine Informative Website</i>. All rights reserved.
+  </p>
+
+  <p>
+    Created by <b>DELA ROSA, Colleen G.</b> & <b>SY, Therese Angela T.</b><br>
+    Grade 9 – Magnesium
+  </p>
+
+  <p>
+    <a href="https://docs.google.com/document/d/1C0Suani4Qww7w-tJ_qEjLSO5she9yZyLBfnCfox8UnY/edit?usp=sharing" target="_blank">
+      View Full APA References (Google Docs)
+    </a>
+  </p>
+
+  <p class="disclaimer">
+    Brooklyn Nine-Nine is owned by NBCUniversal. This website is created
+    for educational purposes only and does not claim ownership of any
+    characters, images, or media used.
+  </p>
+</footer>
 
 </body>
 </html>
