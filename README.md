@@ -26,10 +26,12 @@ This webpage aims to inform and introduce users to the TV show, Brooklyn 99. Div
 - Almost everything is a button that the user can press wherein they'll get directed to another webpage.
 
 
+### Narrative of Personal Journal:
+- There will be an HTML form to collect information like the user's personal notes and annotations, just like how a personal journal would look like. They can type in a title, their name, dates, and other notes. All of these can be saved in the website for users to look back on.
+
 
 ### Use of JavaScript:
 JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is clicked. This improves user experience by making navigation smoother and more interactive.
-
 
 
 ## Wireframes
