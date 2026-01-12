@@ -84,8 +84,16 @@ JavaScript is used to toggle the sidebar menu when the Brooklyn 99 logo is click
 #### Location/s:
 ![location/s](https://cdn.discordapp.com/attachments/1163446318388228167/1433117867267723486/image.png?ex=69038685&is=69023505&hm=14c991c53b0394fc35e64b2274457f0a0647ba28aab0d8c6593aff3350473f5b)
 
-#### Personal Notes:
-![notes](https://cdn.discordapp.com/attachments/1163446318388228167/1433118171682050170/image.png?ex=690386ce&is=6902354e&hm=fc7d1f61d3f6fb3ddb035e44fbe1c01c4d76cded2e49db6a2bc64faec330a279)
+### Personal Journal (HTML Form):
+
+#### Case Overview
+![notes](https://cdn.discordapp.com/attachments/1163446318388228167/1460106940632924281/image.png?ex=6965b60e&is=6964648e&hm=c95564fa55f85d3753707a7926c3c733efb6d72bb799e61c45dce3af55134b2f)
+
+#### Journal
+![journal](https://cdn.discordapp.com/attachments/1163446318388228167/1460107019741823036/image.png?ex=6965b620&is=696464a0&hm=c31cbdfd8663f7bce80e93a6616ef2c96af7159f8cbef59d6a9128adf4a14f3d)
+
+#### Show solutions
+![solutions](https://cdn.discordapp.com/attachments/1163446318388228167/1460107208883966002/image.png?ex=6965b64e&is=696464ce&hm=56774ca5e193854fd19221ada8b035048a3af9a7e1dcebad8ce2862ed92071e0)
 
 
 ### Link to Canva File (Website Outline):
