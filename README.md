@@ -27,7 +27,7 @@ This webpage aims to inform and introduce users to the TV show, Brooklyn 99. Div
 
 
 ### Narrative of Personal Journal:
-- There will be an HTML form to collect information like the user's personal notes and annotations, just like how a personal journal would look like. They can type in a title, their name, dates, and other notes. All of these can be saved in the website for users to look back on.
+- There will be an HTML form to collect information like the user's personal notes and annotations, just like how a personal journal would look like. They can type in a title and other notes. All of these can be saved in the website for users to look back on. A sign-in feature will also be carried on wherein the user will be able to encode their personal information, such as their name and some other important information needed for this page in order for the code to read the data inputted by the user, and will display it on the website as what the user has inputted.
 
 
 ### Use of JavaScript:
