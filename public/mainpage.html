@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brooklyn 99 Case Terminal</title>
+<link rel="stylesheet" href="mainstyles.css">
+</head>
+
+<body>
+
+<div class="profile-icon" onclick="location.href='signup.html'">
+    <img src="icons/profile.png" alt="Profile">
+</div>
+
+<div class="desktop">
+
+    <div class="desktop-sidebar">
+        <div class="icon" onclick="location.href='gallery.html'">
+            <img src="../assets/gallery.png">
+            <span>Gallery</span>
+        </div>
+
+        <div class="icon" onclick="location.href='files.html'">
+            <img src="../assets/files.png">
+            <span>Files</span>
+        </div>
+
+        <div class="icon" onclick="location.href='contacts.html'">
+            <img src="../assets/contacts.png">
+            <span>Contacts</span>
+        </div>
+
+        <div class="icon" onclick="location.href='notes.html'">
+            <img src="../assets/notes.png">
+            <span>Notes</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="popup-window window-1">
+            <h1>Case File: Missing Evidence</h1>
+            <p>
+                Evidence from the 99th precinct has mysteriously disappeared.
+                Review the material and determine who accessed the locker.
+            </p>
+
+            <img src="case_image_placeholder.jpg" class="case-image">
+
+            <div class="extra-content">
+                <h2>Additional Case Notes</h2>
+
+                <p>Surveillance footage reviewed at 03:42 AM.</p>
+                <p>Witness statements conflict with official timeline.</p>
+                <p>Fingerprint scan pending lab confirmation.</p>
+                <p>Security log access attempt at 02:17 AM.</p>
+                <p>Possible internal involvement suspected.</p>
+                <p>Continue cross-referencing badge IDs.</p>
+                <p>Interview lineup scheduled tomorrow morning.</p>
+                <p>Check evidence room camera blind spots.</p>
+                <p>Digital access logs partially corrupted.</p>
+                <p>Detective review ongoing.</p>
+            </div>
+        </div>
+
+        <div class="popup-window window-2">
+            <h1>Investigation Logs</h1>
+            <p>All interrogation records and lab results stored here.</p>
+        </div>
+
+        <div class="popup-window window-3">
+            <h1>Personnel Contacts</h1>
+            <p>List of officers and external witnesses connected to the case.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="instruction-overlay"></div>
+
+<div class="how-it-works">
+    <h1>SYSTEM ACCESS REQUIRED</h1>
+    <p>
+        Welcome Detective.  
+        Use desktop icons to access evidence files.
+    </p>
+    <p>
+        Review notes carefully before concluding.
+    </p>
+    <button onclick="closeInstructions()">ENTER SYSTEM</button>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

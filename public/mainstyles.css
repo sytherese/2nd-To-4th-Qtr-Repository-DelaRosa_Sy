@@ -1,0 +1,265 @@
+body {
+    font-family: 'Courier New', monospace; 
+    background-color: #1f2b3b;
+    color: #e1e1e1;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-image: url('grunge_texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden; 
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.75;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.desktop {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    animation: flicker 5s infinite;
+    opacity: 0.25; 
+    transition: opacity 0.6s ease;
+}
+
+.desktop-sidebar {
+    width: 80px;
+    position: fixed;
+    top: 20%; 
+    left: 30px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 5px;
+    transition: all 0.15s ease;
+}
+
+.icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.icon span {
+    font-size: 13px;
+    text-align: center;
+    color: #e6e6e6; 
+    padding: 2px 6px;
+}
+
+.icon:hover img {
+    transform: scale(1.05);
+}
+
+.icon.selected span {
+    background-color: #1f3d7a;
+    color: white;
+}
+
+.extra-content {
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+.main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+    height: 100vh;
+    position: relative;
+}
+
+.profile-icon {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.profile-icon img {
+    width: 38px;
+    height: 38px;
+    image-rendering: pixelated;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.profile-icon img:hover {
+    filter: brightness(1.1);
+}
+
+.profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+}
+
+.popup-window {
+    background-color: #dcdcdc;
+    border: 2px solid #000;
+    padding: 18px;
+    box-shadow: 6px 6px 0px #000;
+    width: 55%;
+    max-width: 580px;
+    position: absolute;
+    color: #000;
+}
+
+.popup-window h1, .popup-window h2 {
+    color: #2e3a47;
+}
+
+.popup-window p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.case-image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.desktop {
+    opacity: 0.25;
+    transition: opacity 0.6s ease;
+}
+
+.window-1 {
+    top: 12%;
+    left: 220px;
+    z-index: 3;
+
+    height: 420px;          
+    overflow-y: auto;       
+}
+
+.window-2 {
+    top: 22%;
+    left: 380px;
+    z-index: 2;
+}
+
+.window-3 {
+    top: 32%;
+    left: 540px;
+    z-index: 1;
+}
+
+.instruction-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 50; 
+}
+
+.how-it-works {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 420px;
+
+    background-color: #d0d0d0;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0px #000;
+
+    padding: 18px;
+    font-family: 'Courier New', monospace;
+    color: #000;
+
+    z-index: 60;
+}
+
+.how-it-works h1 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+}
+
+.how-it-works button {
+    margin-top: 15px;
+    padding: 6px 14px;
+    background: #1f2b3b;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+}
+
+.how-it-works button:hover {
+    background: #000;
+}
+
+.scratched-texture {
+    background-image: url('scratches.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer a {
+    color: #1e90ff;
+}

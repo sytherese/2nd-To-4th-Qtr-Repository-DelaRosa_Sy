@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Files</title>
+<link rel="stylesheet" href="files.css">
+</head>
+<body>
+
+<div class="desktop">
+
+    <div class="files-window">
+
+        <div class="window-bar">
+            <span>FILES.exe</span>
+            <span class="window-close" onclick="location.href='mainpage.html'">X</span>
+        </div>
+
+        <div class="files-container">
+
+            <div class="files-sidebar" id="filesSidebar">
+
+                <div class="sidebar-header">
+                    <h3 id="sidebarTitle">Folders</h3>
+                    <span class="sidebar-toggle" onclick="toggleSidebar()">_</span>
+                </div>
+
+                <ul id="folderList">
+                    <li onclick="openFolder('documents')">Documents</li>
+                    <li onclick="openFolder('cases')">Cases</li>
+                    <li onclick="openFolder('archived')">Archived</li>
+                    <li onclick="openFolder('misc')">Misc</li>
+                </ul>
+
+                <ul id="backButton" style="display:none;">
+                    <li onclick="goBack()">← Back</li>
+                </ul>
+
+            </div>
+
+            <div class="files-main" id="filesMain">
+            </div>
+
+            <div class="files-preview" id="filesPreview">
+                <div class="preview-bar">
+                    <span id="previewTitle">File Info</span>
+                    <span class="preview-close" onclick="closePreview()">X</span>
+                </div>
+                <div class="preview-content" id="previewContent">
+                    <p>Select a file to see details here.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="files.js"></script>
+</body>
+</html>

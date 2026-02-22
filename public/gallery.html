@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence Gallery</title>
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<div class="desktop">
+
+    <div class="gallery-window">
+
+        <div class="window-bar">
+            <span>EVIDENCE_GALLERY.exe</span>
+            <span class="window-close" onclick="location.href='mainpage.html'">X</span>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-sidebar" id="gallerySidebar">
+    <div class="sidebar-header">
+        <h3>Sections</h3>
+        <span class="sidebar-toggle" onclick="toggleSidebar()">_</span>
+    </div>
+    <ul>
+        <li onclick="loadSection('favorites')">Favorites</li>
+        <li onclick="loadSection('recent')">Recently Deleted</li>
+        <li onclick="loadSection('all')">All Photos</li>
+    </ul>
+</div>
+
+            <div class="gallery-main">
+
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="thumb" onclick="openImage(1)"><img src="images/photo1.jpg"></div>
+                    <div class="thumb" onclick="openImage(2)"><img src="images/photo2.jpg"></div>
+                    <div class="thumb" onclick="openImage(3)"><img src="images/photo3.jpg"></div>
+                    <div class="thumb" onclick="openImage(4)"><img src="images/photo4.jpg"></div>
+                    <div class="thumb" onclick="openImage(5)"><img src="images/photo5.jpg"></div>
+                    <div class="thumb" onclick="openImage(6)"><img src="images/photo6.jpg"></div>
+                    <div class="thumb" onclick="openImage(7)"><img src="images/photo7.jpg"></div>
+                </div>
+
+                <div class="image-view" id="imageView">
+
+                    <div class="image-bar">
+                        <span>IMAGE_VIEWER</span>
+                        <span class="close-btn" onclick="closeImage()">X</span>
+                    </div>
+
+                    <div class="image-content">
+                        <div class="image-display">
+                            <img id="fullImage">
+                        </div>
+
+                        <div class="image-description">
+                            <h3>Case Notes</h3>
+                            <p id="imageText"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="gallery.js"></script>
+</body>
+</html>
