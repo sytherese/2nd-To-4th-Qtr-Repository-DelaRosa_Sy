@@ -1,0 +1,300 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #1f2b3b;
+  background-image: url('grunge_texture.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #e1e1e1;
+}
+
+.desktop {
+  display: flex;
+  height: 100vh;
+}
+
+.contacts-window {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #dcdcdc;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.window-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6b757d;
+  padding: 6px 12px;
+  color: white;
+  border-bottom: 2px solid black;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.window-close {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: 1px solid #000;
+  background-color: #dcdcdc;
+  color: #000;
+  user-select: none;
+  z-index: 5;
+}
+
+.window-close:hover {
+  background-color: #8b979f;
+  color: #fff;
+}
+
+.contacts-container {
+  display: flex;
+  height: calc(100% - 30px);
+}
+
+.contacts-list {
+  width: 280px;
+  background: #bcbcbc;
+  border-right: 2px solid black;
+  padding: 10px 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-size: 14px;
+  user-select: none;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-bottom: 1px solid #999;
+  cursor: default;
+  transition: background 0.15s ease;
+}
+
+.contact-item:hover {
+  background: #8b979f;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.contact-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1.5px solid #444;
+  box-shadow: 0 0 3px #000a;
+  background-color: #8b979f;
+}
+
+.contact-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  user-select: text;
+}
+
+.contact-name {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-style: italic;
+  color: #555;
+  user-select: none;
+}
+
+.info-button {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid #444;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #444;
+  background-color: #dcdcdc;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #8b979f;
+  color: white;
+}
+
+.officer-profile-window {
+  flex: 1;
+  background-color: #39455a;
+  color: #d0d0d0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+.officer-profile-window .window-bar {
+  background-color: #2a3242;
+  color: #d0d0d0;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin: -20px -20px 15px -20px;
+}
+
+.officer-profile-window .close-btn {
+  background: none;
+  border: none;
+  color: #d0d0d0;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-content {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-picture {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #dcdcdc;
+  box-shadow: 0 0 8px #00000066;
+  background-color: #8b979f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details-text {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.profile-details-text h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #e6e6e6;
+}
+
+.case-involvement {
+  background-color: #4a5369;
+  border-radius: 4px;
+  padding: 8px;
+  font-style: italic;
+  white-space: pre-wrap;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #e1e1e1;
+}
+
+.suspicion-bar {
+  width: 100%;
+  height: 18px;
+  background-color: #999;
+  border: 1px solid #444;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#suspicionFill {
+  height: 100%;
+  background-color: red;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+#personalNotes {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  font-family: 'Courier New', monospace;
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background-color: #dcdcdc;
+  color: #000;
+}
+
+#saveNotesBtn {
+  background-color: #2a3242;
+  color: #dcdcdc;
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+#saveNotesBtn:hover {
+  background-color: #3e4a6b;
+}
+
+.confidential-box {
+  margin-top: 18px;
+  border: 2px dashed black;
+  padding: 12px;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  background-color: #eee;
+  color: #111;
+  white-space: pre-wrap;
+  user-select: text;
+}

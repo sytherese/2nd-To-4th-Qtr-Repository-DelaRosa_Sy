@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal Notes - Brooklyn 99 Case Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="notes.css" />
+</head>
+<body>
+
+<div class="desktop">
+
+  <div class="notes-window">
+
+    <div class="window-bar">
+      <span>PERSONAL_NOTES.exe</span>
+      <span class="window-close" onclick="location.href='mainpage.html'">X</span>
+    </div>
+
+    <div class="user-info" id="userInfo"></div>
+
+    <div class="content-wrapper">
+
+      <div class="notes-list" id="notesList" tabindex="0">
+      </div>
+
+      <div class="note-editor" id="noteEditor" style="display:none;">
+        <div class="editor-header">
+          <input type="text" id="journalName" placeholder="Journal Name" maxlength="60" spellcheck="false" />
+          <input type="text" id="noteTitle" placeholder="Note Title" maxlength="60" spellcheck="false" />
+          <button id="deleteNoteBtn" title="Delete Note">Delete</button>
+        </div>
+        <textarea id="noteContent" placeholder="Write your notes here..." spellcheck="false"></textarea>
+        <div class="editor-footer">
+          <button id="saveNoteBtn">Save Note</button>
+          <button id="showSolutionBtn">Show Solution</button>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="new-note-btn" id="newNoteBtn" title="Create New Note">+ New Note</button>
+
+  </div>
+
+</div>
+
+<script src="notes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contacts - Brooklyn 99 Case Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="contacts.css" />
+</head>
+<body>
+
+<div class="desktop">
+
+  <div class="contacts-window">
+
+    <div class="window-bar">
+      <span>CONTACTS_MANAGER.exe</span>
+      <span class="window-close" onclick="location.href='mainpage.html'">X</span>
+    </div>
+
+    <div class="contacts-container">
+
+      <div class="contacts-list" id="contactsList">
+      </div>
+
+      <div class="officer-profile-window" id="officerProfileWindow" style="display:none;">
+        <div class="window-bar">
+          <span>OFFICER_PROFILE</span>
+          <button class="close-btn" onclick="closeProfile()">X</button>
+        </div>
+        <div class="profile-content">
+          <div class="profile-picture">
+            <img id="profileImg" src="" alt="Profile Picture" />
+          </div>
+          <div class="profile-details-text">
+            <h2 id="fullName">Full Name</h2>
+            <p><strong>Personal Title:</strong> <span id="personalTitle"></span></p>
+            <p><strong>Nickname:</strong> <span id="nickname"></span></p>
+            <p><strong>Rank:</strong> <span id="rank"></span></p>
+            <p><strong>Badge ID:</strong> <span id="badgeId"></span></p>
+            <p><strong>E-mail:</strong> <span id="email"></span></p>
+            <p><strong>Case Involvement:</strong></p>
+            <p class="case-involvement" id="caseInvolvement"></p>
+
+            <p><strong>Suspicion Level:</strong></p>
+            <div class="suspicion-bar">
+              <div id="suspicionFill"></div>
+            </div>
+
+            <label for="personalNotes"><strong>Your Personal Notes:</strong></label>
+            <textarea id="personalNotes" placeholder="Add your notes here..."></textarea>
+            <button id="saveNotesBtn">Save Notes</button>
+
+            <div class="confidential-box" id="confidentialBox"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="contacts.js"></script>
+
+</body>
+</html>
