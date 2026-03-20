@@ -6,6 +6,9 @@
 ### Logo:
 ![Logo](b99logo.png)
 
+### Implementing CRUD (in Solve A Case):
+The implementation of CRUD in our website is to first make the user input their sign up/log in data so that they will be able to restore their past progress from the previous trials they've had. Users would be able to decide between signing up an old account, logging in a completely new one with the option to change their password again if ever it is forgotten, or if they want to continue browsing as a guest. Before the user enters the actual game, they will have two options: the first option is to start a whole new entire game, or if they want to continue a previously saved one. For every new game, there will be a save & quit option which will automatically create a new slot along with the previous ones.
+
 ### Description:
 This webpage aims to inform and introduce users to the TV show, Brooklyn 99. Diving into the hilarious world of the 99th precinct, where detectives solve crimes with a mix of wit, friendship, and chaos. It provides background information about the show's characters, setting, and comedic style. Visitors can explore fun facts, episode highlights, and learn why Brooklyn 99 has become a fan-favorite sitcom.
 
