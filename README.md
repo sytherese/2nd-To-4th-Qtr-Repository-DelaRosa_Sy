@@ -6,7 +6,7 @@
 ### Logo:
 ![Logo](b99logo.png)
 
-### Implementing CRUD (in Solve A Case):
+### FINAL MODIFICATION PROPOSAL:
 The implementation of CRUD in our website is to first make the user input their sign up/log in data so that they will be able to restore their past progress from the previous trials they've had. Users would be able to decide between signing up an old account, logging in a completely new one with the option to change their password again if ever it is forgotten, or if they want to continue browsing as a guest. Before the user enters the actual game, they will have two options: the first option is to start a whole new entire game, or if they want to continue a previously saved one. For every new game, there will be a save & quit option which will automatically create a new slot along with the previous ones.
 
 ### Description:
