@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Home</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#1f2b3b;
+font-family:monospace;
+color:white;
+overflow:hidden;
+}
+
+.menu{
+text-align:center;
+}
+
+button{
+display:block;
+margin:10px;
+padding:15px;
+width:200px;
+background:#111;
+color:#fff;
+border:1px solid #444;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+<h1>CASE TERMINAL</h1>
+
+<button onclick="location.href='mainpage.html'">NEW GAME</button>
+<button onclick="location.href='continue.html'">CONTINUE GAME</button>
+
+<div id="continue" style="display:none;margin-top:10px">
+NO SAVE DATA
+</div>
+</div>
+
+<script>
+function toggle(){
+let c=document.getElementById("continue");
+c.style.display = c.style.display==="block"?"none":"block";
+}
+</script>
+
+</body>
+</html>

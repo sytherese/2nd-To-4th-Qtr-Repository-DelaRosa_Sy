@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#1f2b3b;
+font-family:monospace;
+color:white;
+}
+
+.box{
+background:#dcdcdc;
+padding:30px;
+width:320px;
+color:#000;
+border:3px solid #000;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#111;
+color:#fff;
+cursor:pointer;
+}
+
+a{
+font-size:11px;
+color:gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>LOGIN</h2>
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">ENTER</button>
+
+<p><a href="password.html">Forgot password?</a></p>
+<p><a href="signup.html">Back to Signup</a></p>
+</div>
+
+<script>
+function login(){
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(user && user.email===email.value && user.password===password.value){
+location.href="home.html";
+}else{
+alert("Invalid login");
+}
+}
+</script>
+
+</body>
+</html>
