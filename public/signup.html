@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Signup - Case Terminal</title>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mainstyles.css">
 
 <style>
+/* ...existing code... */
 body{
 margin:0;
 height:100vh;
@@ -19,6 +21,7 @@ color:#fff;
 overflow:hidden;
 }
 
+/* keep only the page-specific container styles here; sidebar styles come from mainstyles.css */
 .container{
 background:#dcdcdc;
 padding:30px;
@@ -40,7 +43,7 @@ margin:10px 0;
 border:2px solid #333;
 }
 
-button{
+button.primary{
 width:100%;
 padding:10px;
 background:#1f2b3b;
@@ -58,10 +61,25 @@ text-decoration:none;
 a:hover{
 text-decoration:underline;
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- header toggle + sidebar (matches mainpage structure & classes) -->
+<button class="header-toggle" id="sidebarToggle">
+    <img src="../assets/b99logo.png" alt="Menu">
+</button>
+
+<aside class="header-sidebar" id="sidebar">
+    <a href="../index.html">Main Page</a>
+    <a href="episodes.html">Episodes</a>
+    <a href="production.html">Production</a>
+    <a href="signup.html">Solve a Case</a> <!-- leads to signup terminal first -->
+</aside>
+
+<div class="header-backdrop" id="sidebarBackdrop"></div>
 
 <div class="container">
 <h1>CASE SIGNUP</h1>
@@ -70,13 +88,14 @@ text-decoration:underline;
 <input id="email" placeholder="Email">
 <input id="password" type="password" placeholder="Password">
 
-<button onclick="signup()">CREATE ACCOUNT</button>
+<button class="primary" onclick="signup()">CREATE ACCOUNT</button>
 
 <p><a href="login.html">Already have an account?</a></p>
 <p><a href="home.html">Continue as Guest</a></p>
 </div>
 
 <script>
+/* ...existing code... */
 function signup(){
 localStorage.setItem("user", JSON.stringify({
 username: username.value,
@@ -87,6 +106,9 @@ password: password.value
 location.href="login.html";
 }
 </script>
+
+<!-- reuse centralized scripts for sidebar toggle and other behaviors -->
+<script src="scripts.js"></script>
 
 </body>
 </html>

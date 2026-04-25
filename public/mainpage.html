@@ -26,6 +26,35 @@ box-shadow:4px 4px 0 #000;
 .save-btn:hover{
 background:#000;
 }
+
+/* Save modal/backdrop (simple, reuses popup-window look) */
+#saveBackdrop {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  z-index:6000;
+}
+#saveModal {
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:6001;
+  width: 420px;
+  max-width:90vw;
+}
+.save-actions{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+.save-actions button{
+  padding:8px 12px;
+  border:2px solid #000;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -39,7 +68,7 @@ background:#000;
     <a href="../index.html">Main Page</a>
     <a href="episodes.html">Episodes</a>
     <a href="production.html">Production</a>
-    <a href="mainpage.html">Solve a Case</a>
+    <a href="signup.html">Solve a Case</a>
 </aside>
 
 <div class="header-backdrop" id="sidebarBackdrop"></div>
@@ -118,26 +147,61 @@ background:#000;
 <!-- ONLY SAVE BUTTON -->
 <button class="save-btn" onclick="saveCase()">SAVE CASE</button>
 
+<!-- SAVE CONFIRM MODAL -->
+<div id="saveBackdrop"></div>
+
+<div id="saveModal" class="popup-window">
+  <h2>SAVE PROGRESS?</h2>
+  <p>Would you like to save your progress before leaving?</p>
+  <div class="save-actions">
+    <button id="dontSaveBtn" style="background:#dcdcdc;">Don't Save</button>
+    <button id="saveNewBtn" style="background:#1f2b3b;color:#fff;">Save as New Slot</button>
+    <button id="cancelSaveBtn" style="background:#fff;">Cancel</button>
+  </div>
+</div>
+
 <script>
 function saveCase(){
+  // show modal
+  document.getElementById('saveBackdrop').style.display = 'block';
+  document.getElementById('saveModal').style.display = 'block';
+}
 
-let user = JSON.parse(localStorage.getItem("b99_user"));
-let key = "b99_save_" + (user?.email || "guest");
-
-let saves = JSON.parse(localStorage.getItem(key)) || [];
-
-saves.push({
-id: Date.now(),
-name: "Case " + (saves.length + 1),
-time: new Date().toLocaleString(),
-status: "IN PROGRESS",
-notes: "Evidence locker investigation"
+// Don't save -> go back to home
+document.getElementById('dontSaveBtn').addEventListener('click', ()=>{
+  document.getElementById('saveBackdrop').style.display = 'none';
+  document.getElementById('saveModal').style.display = 'none';
+  window.location.href = "home.html";
 });
 
-localStorage.setItem(key, JSON.stringify(saves));
+// Save as new slot -> persist and go to continue.html
+document.getElementById('saveNewBtn').addEventListener('click', ()=>{
+  let user = JSON.parse(localStorage.getItem("b99_user"));
+  let key = "b99_save_" + (user?.email || "guest");
 
-window.location.href = "continue.html";
-}
+  let saves = JSON.parse(localStorage.getItem(key)) || [];
+
+  saves.push({
+    id: Date.now(),
+    name: "Case " + (saves.length + 1),
+    time: new Date().toLocaleString(),
+    status: "IN PROGRESS",
+    notes: "Evidence locker investigation"
+  });
+
+  localStorage.setItem(key, JSON.stringify(saves));
+
+  // hide modal then navigate
+  document.getElementById('saveBackdrop').style.display = 'none';
+  document.getElementById('saveModal').style.display = 'none';
+  window.location.href = "continue.html";
+});
+
+// Cancel -> close modal and stay
+document.getElementById('cancelSaveBtn').addEventListener('click', ()=>{
+  document.getElementById('saveBackdrop').style.display = 'none';
+  document.getElementById('saveModal').style.display = 'none';
+});
 </script>
 
 <script src="scripts.js"></script>

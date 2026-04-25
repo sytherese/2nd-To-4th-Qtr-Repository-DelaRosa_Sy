@@ -4,48 +4,93 @@
 <meta charset="UTF-8" />
 <title>Login</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mainstyles.css">
+
 <style>
+/* ...existing code... */
+/* keep page-specific overrides only; sidebar/header come from mainstyles.css */
 body{
-margin:0;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#1f2b3b;
-font-family:monospace;
-color:white;
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#1f2b3b;
+  font-family:'Courier New', monospace;
+  color:#fff;
+  overflow:hidden;
 }
 
 .box{
-background:#dcdcdc;
-padding:30px;
-width:320px;
-color:#000;
-border:3px solid #000;
+  background:#dcdcdc;
+  padding:30px;
+  width:360px;
+  color:#000;
+  border:3px solid #000;
+  box-shadow:6px 6px 0 #000;
 }
 
 input{
-width:100%;
-padding:10px;
-margin:10px 0;
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:2px solid #333;
+  box-sizing:border-box;
 }
 
 button{
-width:100%;
-padding:10px;
-background:#111;
-color:#fff;
-cursor:pointer;
+  width:100%;
+  padding:10px;
+  background:#111;
+  color:#fff;
+  cursor:pointer;
+  border:none;
 }
 
 a{
-font-size:11px;
-color:gray;
+  font-size:11px;
+  color:gray;
 }
+
+.header-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 10000;
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header-toggle img {
+  height: 85px;
+  width: auto;
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- header toggle + sidebar (matches mainpage structure & classes) -->
+<button class="header-toggle" id="sidebarToggle">
+    <img src="../assets/b99logo.png" alt="Menu">
+</button>
+
+<aside class="header-sidebar" id="sidebar">
+    <a href="../index.html">Main Page</a>
+    <a href="episodes.html">Episodes</a>
+    <a href="production.html">Production</a>
+    <a href="signup.html">Solve a Case</a>
+</aside>
+
+<div class="header-backdrop" id="sidebarBackdrop"></div>
+
+<!-- profile icon removed -->
 
 <div class="box">
 <h2>LOGIN</h2>
@@ -60,16 +105,22 @@ color:gray;
 </div>
 
 <script>
+/* ...existing code... */
 function login(){
-let user = JSON.parse(localStorage.getItem("user"));
+  let user = JSON.parse(localStorage.getItem("user"));
 
-if(user && user.email===email.value && user.password===password.value){
-location.href="home.html";
-}else{
-alert("Invalid login");
-}
+  if(user && user.email===email.value && user.password===password.value){
+    // persist a lightweight session key used elsewhere
+    localStorage.setItem("b99_user", JSON.stringify({ email:user.email, username:user.username }));
+    location.href="home.html";
+  }else{
+    alert("Invalid login");
+  }
 }
 </script>
+
+<!-- reuse centralized script for sidebar toggle and other behaviors -->
+<script src="scripts.js"></script>
 
 </body>
 </html>

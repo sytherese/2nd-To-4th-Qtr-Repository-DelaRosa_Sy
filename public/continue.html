@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
 <style>
+/* ...existing code... */
 body{
 margin:0;
 background:#1f2b3b;
@@ -74,10 +75,27 @@ display:none;
 width:90%;
 padding:5px;
 }
+
+/* simple top-right back button */
+.back-btn{
+position:fixed;
+top:12px;
+right:12px;
+padding:8px 10px;
+background:#dcdcdc;
+border:3px solid #000;
+color:#000;
+cursor:pointer;
+box-shadow:2px 2px 0 #000;
+z-index:10000;
+}
 </style>
 </head>
 
 <body>
+
+<!-- back to home -->
+<button class="back-btn" onclick="location.href='home.html'">HOME</button>
 
 <div class="header">
 <h1>CASE ARCHIVE</h1>
